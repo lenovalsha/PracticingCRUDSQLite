@@ -29,5 +29,33 @@ namespace PracticingCRUDSQLite
         {
 
         }
+        public void Create()
+        {
+            using (DataContext context = new DataContext())
+            {
+                var name = txtName.Text;
+                var address = txtAddress.Text;
+                if (name != null && address != null)
+                {
+                    context.Users.Add(new User() { Name = name, Address = address });
+                    context.SaveChanges();
+                }
+                else
+                    return;
+
+            }
+        }
+        public void Read()
+        {
+
+        }
+        public void Update()
+        {
+
+        }
+        public void Delete()
+        {
+
+        }
     }
 }

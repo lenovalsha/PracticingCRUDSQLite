@@ -13,13 +13,15 @@ namespace PracticingCRUDSQLite
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //takes in a string of our data source
-            optionsBuilder.UseSqlite("Data Source = UserData.db");
+            optionsBuilder.UseSqlite("Data Source = UserData.db");//defined a connection string
+            
         }
 
         //since this context class is used to MAP to the database
         //we need to define our table in the database
 
         public DbSet<User> Users { get; set; }//represents a table in our database called USERS
+
 
 
     }
