@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,235">
+        <ListView Name="UserList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,235">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Id}"/>
@@ -24,9 +24,9 @@
             <TextBox Name="txtAddress" HorizontalAlignment="Left" Margin="80,336,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         </Grid>
         <Button Name="btnCreate" Content="Create" HorizontalAlignment="Left" Margin="20,394,0,0" VerticalAlignment="Top" Click="btnCreate_Click"/>
-        <Button Name="btnRead" Content="Read" HorizontalAlignment="Left" Margin="79,394,0,0" VerticalAlignment="Top"/>
-        <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="137,394,0,0" VerticalAlignment="Top"/>
-        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="201,394,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnRead" Content="Read" HorizontalAlignment="Left" Margin="79,394,0,0" VerticalAlignment="Top" Click="btnRead_Click"/>
+        <Button Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="137,394,0,0" VerticalAlignment="Top" Click="btnUpdate_Click"/>
+        <Button Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="201,394,0,0" VerticalAlignment="Top" Click="btnDelete_Click"/>
 
     </Grid>
 </Window>
